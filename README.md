@@ -46,3 +46,4 @@ NEXT_PUBLIC_META_PIXEL_ID=
 - `lucide-react@^1.31.0` for all interface icons.
 - The Parsian logo is stored as a transparent 2048×2048 PNG in `public/parsian-logo-2k.png`.
 - Favicon/app icon assets are generated from the same logo in `app/favicon.ico`, `app/icon.png`, and `app/apple-icon.png`.
+# parsian-insurance
