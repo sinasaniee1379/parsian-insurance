@@ -21,6 +21,9 @@ import {
   Sparkles,
   Wrench,
   X,
+  BadgePercent,
+  Calculator,
+  WalletCards,
   type LucideProps,
 } from "lucide-react";
 
@@ -45,7 +48,10 @@ export type IconName =
   | "clock"
   | "pin"
   | "mail"
-  | "send";
+  | "send"
+  | "calculator"
+  | "wallet"
+  | "percent";
 
 interface IconProps extends LucideProps {
   name: IconName;
@@ -73,6 +79,9 @@ const icons = {
   pin: MapPin,
   mail: Mail,
   send: Send,
+  calculator: Calculator,
+  wallet: WalletCards,
+  percent: BadgePercent,
 } satisfies Record<IconName, ComponentType<LucideProps>>;
 
 export function Icon({ name, strokeWidth = 1.8, ...props }: IconProps) {
