@@ -1,5 +1,6 @@
 import { Icon } from "@/components/Icon";
 import { Reveal } from "@/components/Motion";
+import { Typewriter } from "@/components/ui/Typewriter";
 import { quickServices } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,10 +16,22 @@ const Hero = () => {
             <span className="h-2 w-2 rounded-full bg-(--brand-orange)" />
             بیمه پارسیان · نمایندگی آفرین صناعی
           </div>
-          <h1 className="max-w-3xl text-[clamp(2.55rem,6vw,5.1rem)] font-black leading-[1.18] tracking-[-.055em] text-slate-950">
-            آرامش امروز،
-            <br />
-            <span className="text-(--brand-blue)">اطمینان فردا</span>
+          <h1 className="min-h-[2.4em] max-w-3xl text-[clamp(2.55rem,6vw,5.1rem)] font-black leading-[1.18] tracking-[-.055em] text-slate-950">
+            <Typewriter
+              texts={[
+                {
+                  text: "آرامش،امید و اطمینان",
+                  className: "text-[var(--brand-blue)]",
+                },
+                {
+                  text: "با بیمه پارسیان",
+                  className: "text-[var(--brand-orange)]",
+                },
+              ]}
+              typingSpeed={90}
+              loop={true}
+              direction="rtl"
+            />
           </h1>
           <p className="mt-7 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg sm:leading-9">
             برای انتخاب بیمه مناسب خود، خانواده یا کسب‌وکارتان، اطلاعات را ساده

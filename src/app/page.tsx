@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { Icon } from "@/components/Icon";
 import { ThirdPartyCalculatorUI } from "@/components/ThirdPartyCalculatorUI";
 import Hero from "./components/Hero";
 import QuickServices from "./components/QuickServices";
@@ -11,7 +9,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <section className="section-shell overflow-hidden">
+      <section className="section-shell overflow-hidden mt-10">
         <div className="container-shell">
           <div className="mx-auto max-w-5xl">
             <div className="mb-6 text-center sm:mb-8">

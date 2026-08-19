@@ -5,6 +5,8 @@ import { Footer } from "@/components/layouts/Footer";
 import { Analytics } from "@/components/Analytics";
 import { siteConfig } from "@/lib/site";
 import { inter, IranSans } from "@/constants/localFont";
+import QueryProvider from "@/components/provider/query-provider";
+import ToastContainer from "@/components/provider/ToastContainer";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -59,7 +61,12 @@ export default function RootLayout({
     >
       <body>
         <Header />
-        <main>{children}</main>
+        <main>
+          <QueryProvider>
+            <ToastContainer />
+            {children}
+          </QueryProvider>
+        </main>
         <Footer />
         <Analytics />
         <script

@@ -107,7 +107,6 @@ export default async function InsuranceDetailPage({
 }) {
   const { slug } = await params;
   const item = getInsuranceBySlug(slug);
-  console.log(item?.image);
   if (!item) notFound();
 
   const schema = {

@@ -3,7 +3,6 @@ import { ContactForm } from "@/components/ContactForm";
 import { Icon } from "@/components/Icon";
 import { Reveal } from "@/components/Motion";
 import { siteConfig } from "@/lib/site";
-
 export const metadata: Metadata = {
   title: "تماس با ما",
   description:
