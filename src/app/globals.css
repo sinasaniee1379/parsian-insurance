@@ -8,8 +8,19 @@
   --surface: #f7f9fc;
 }
 
+
+
+
 @theme inline {
-  --font-sans: Vazirmatn, Tahoma, Arial, sans-serif;
+  --font-sans: var(--font-iranSans);
+}
+html {
+  direction: rtl;
+  font-family: var(--font-iranSans);
+}
+
+@theme{
+  --font-iranSans: iranSans, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -18,7 +29,7 @@ body {
   margin: 0;
   background: var(--surface);
   color: var(--ink);
-  font-family: Vazirmatn, Tahoma, Arial, sans-serif;
+  font-family: iranSans, Tahoma, Arial, sans-serif;
   text-rendering: optimizeLegibility;
 }
 ::selection { background: #f5b02055; color: #10233f; }
