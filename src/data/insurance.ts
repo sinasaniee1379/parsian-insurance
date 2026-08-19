@@ -1,3 +1,14 @@
+import carImage from "@/assets/insurance/car.png";
+import lifeImage from "@/assets/insurance/life.png";
+import fire from "@/assets/insurance/fire-home.png";
+import liabilityImage from "@/assets/insurance/liability.png";
+import cargoImage from "@/assets/insurance/cargo.png";
+import accidentImage from "@/assets/insurance/accident.png";
+import healthImage from "@/assets/insurance/health.png";
+import energy from "@/assets/insurance/energy.png";
+import engineeringImage from "@/assets/insurance/engineering.png";
+import marineAviationImage from "@/assets/insurance/marine-aviation.png";
+import { StaticImageData } from "next/image";
 export type InsuranceCategory =
   | "خودرو"
   | "اشخاص"
@@ -39,7 +50,7 @@ export interface InsuranceProduct {
   icon: InsuranceIcon;
   sourceUrl?: string;
   image?: {
-    src: string;
+    src: StaticImageData;
     alt: string;
   };
   featured?: boolean;
@@ -76,6 +87,10 @@ export const insuranceProducts: InsuranceProduct[] = [
       },
     ],
     icon: "car",
+    image: {
+      src: carImage,
+      alt: "بیمه خودرو",
+    },
     sourceUrl:
       "https://parsianinsurance.ir/fa-IR/parsianinsurance/3823/page/%D8%A8%D9%8A%D9%85%D9%87-%D8%AE%D9%88%D8%AF%D8%B1%D9%88",
     featured: true,
@@ -115,6 +130,10 @@ export const insuranceProducts: InsuranceProduct[] = [
       },
     ],
     icon: "spark",
+    image: {
+      src: lifeImage,
+      alt: "بیمه‌های زندگی",
+    },
     sourceUrl:
       "https://parsianinsurance.ir/fa-IR/parsianinsurance/3834/page/%D8%A8%D9%8A%D9%85%D9%87-%D8%B2%D9%86%D8%AF%DA%AF%DB%8C",
     featured: true,
@@ -171,9 +190,10 @@ export const insuranceProducts: InsuranceProduct[] = [
     ],
     icon: "home",
     image: {
-      src: "/insurance/fire-home-2k.png",
+      src: fire,
       alt: "خانه مسکونی محافظت‌شده در برابر ریسک‌های بیمه‌ای",
     },
+
     sourceUrl:
       "https://parsianinsurance.ir/fa-IR/parsianinsurance/3825/page/%D8%A8%DB%8C%D9%85%D9%87-%D8%A2%D8%AA%D8%B4-%D8%B3%D9%88%D8%B2%DB%8C",
     featured: true,
@@ -211,6 +231,10 @@ export const insuranceProducts: InsuranceProduct[] = [
       },
     ],
     icon: "briefcase",
+    image: {
+      src: liabilityImage,
+      alt: "بیمه مسئولیت",
+    },
     sourceUrl:
       "https://parsianinsurance.ir/fa-IR/parsianinsurance/3822/page/%D8%A8%DB%8C%D9%85%D9%87-%D9%85%D8%B3%D8%A6%D9%88%D9%84%DB%8C%D8%AA",
     featured: true,
@@ -251,6 +275,10 @@ export const insuranceProducts: InsuranceProduct[] = [
       },
     ],
     icon: "box",
+    image: {
+      src: cargoImage,
+      alt: "بیمه باربری و حمل‌ونقل",
+    },
     sourceUrl:
       "https://parsianinsurance.ir/fa-IR/parsianinsurance/4692/page/%D8%A8%DB%8C%D9%85%D9%87-%D8%A8%D8%A7%D8%B1%D8%A8%D8%B1%DB%8C",
     featured: true,
@@ -284,6 +312,10 @@ export const insuranceProducts: InsuranceProduct[] = [
       },
     ],
     icon: "activity",
+    image: {
+      src: accidentImage,
+      alt: "بیمه حوادث",
+    },
     sourceUrl:
       "https://parsianinsurance.ir/fa-IR/parsianinsurance/3820/page/%D8%A8%DB%8C%D9%85%D9%87-%D8%AD%D9%88%D8%A7%D8%AF%D8%AB",
   },
@@ -336,6 +368,10 @@ export const insuranceProducts: InsuranceProduct[] = [
       },
     ],
     icon: "heart",
+    image: {
+      src: healthImage,
+      alt: "بیمه تکمیلی درمان",
+    },
     sourceUrl:
       "https://parsianinsurance.ir/fa-IR/parsianinsurance/4700/page/%D8%A8%DB%8C%D9%85%D9%87-%D8%AA%DA%A9%D9%85%DB%8C%D9%84%DB%8C-%D8%AF%D8%B1%D9%85%D8%A7%D9%86",
     featured: true,
@@ -371,6 +407,10 @@ export const insuranceProducts: InsuranceProduct[] = [
       },
     ],
     icon: "wrench",
+    image: {
+      src: engineeringImage,
+      alt: "بیمه مهندسی",
+    },
     sourceUrl:
       "https://parsianinsurance.ir/fa-IR/parsianinsurance/3821/page/%D8%A8%D9%8A%D9%85%D9%87-%D9%85%D9%87%D9%86%D8%AF%D8%B3%DB%8C",
   },
@@ -429,7 +469,7 @@ export const insuranceProducts: InsuranceProduct[] = [
     ],
     icon: "fuel",
     image: {
-      src: "/insurance/energy-2k.png",
+      src: energy,
       alt: "تاسیسات نفت، گاز و پتروشیمی تحت پوشش بیمه انرژی",
     },
     sourceUrl:
@@ -478,12 +518,18 @@ export const insuranceProducts: InsuranceProduct[] = [
       },
     ],
     icon: "anchor",
+    image: {
+      src: marineAviationImage,
+      alt: "بیمه کشتی، هواپیما و خاص",
+    },
     sourceUrl:
       "https://parsianinsurance.ir/fa-IR/parsianinsurance/5106/page/%D8%A8%DB%8C%D9%85%D9%87-%DA%A9%D8%B4%D8%AA%DB%8C%D8%8C-%D9%87%D9%88%D8%A7%D9%BE%DB%8C%D9%85%D8%A7-%D9%88-%D8%AE%D8%A7%D8%B5",
   },
 ];
 
-export const featuredInsuranceProducts = insuranceProducts.filter((item) => item.featured);
+export const featuredInsuranceProducts = insuranceProducts.filter(
+  (item) => item.featured,
+);
 
 export function getInsuranceBySlug(slug: string) {
   return insuranceProducts.find((item) => item.slug === slug);

@@ -22,19 +22,33 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
+
   const item = getInsuranceBySlug(slug);
+
   if (!item) return {};
 
   return {
     title: item.title,
     description: item.description,
-    alternates: { canonical: `/insurance/${item.slug}` },
+
+    alternates: {
+      canonical: `/insurance/${item.slug}`,
+    },
+
     openGraph: {
       title: `${item.title} | بیمه پارسیان - نمایندگی آفرین صناعی`,
       description: item.description,
       type: "article",
+
       images: item.image
-        ? [{ url: item.image.src, alt: item.image.alt }]
+        ? [
+            {
+              url: item.image.src.src,
+              width: item.image.src.width,
+              height: item.image.src.height,
+              alt: item.image.alt,
+            },
+          ]
         : undefined,
     },
   };
@@ -93,6 +107,7 @@ export default async function InsuranceDetailPage({
 }) {
   const { slug } = await params;
   const item = getInsuranceBySlug(slug);
+  console.log(item?.image);
   if (!item) notFound();
 
   const schema = {
