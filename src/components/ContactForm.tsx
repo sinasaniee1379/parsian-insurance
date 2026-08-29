@@ -83,7 +83,7 @@ export function ContactForm() {
         textareaProps={{
           ...register("description"),
           placeholder: "اگر توضیحی دارید اینجا بنویسید",
-          inputMode: "tel",
+          inputMode: "text",
           autoComplete: "tel",
         }}
         type="textarea"
