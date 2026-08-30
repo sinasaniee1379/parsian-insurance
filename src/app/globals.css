@@ -121,3 +121,39 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   outline: 3px solid rgba(245, 176, 32, 0.55);
   outline-offset: 6px;
 }
+
+.insurance-news-swiper {
+  padding: 4px 4px 42px;
+}
+
+.insurance-news-swiper .swiper-slide {
+  height: auto;
+}
+
+.insurance-news-swiper .swiper-button-next,
+.insurance-news-swiper .swiper-button-prev {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #dbe3ee;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--brand-blue);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+}
+
+.insurance-news-swiper .swiper-button-next::after,
+.insurance-news-swiper .swiper-button-prev::after {
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.insurance-news-swiper .swiper-pagination-bullet-active {
+  background: var(--brand-blue);
+}
+
+@media (max-width: 640px) {
+  .insurance-news-swiper .swiper-button-next,
+  .insurance-news-swiper .swiper-button-prev {
+    display: none;
+  }
+}

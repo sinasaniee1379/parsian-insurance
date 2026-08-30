@@ -20,6 +20,7 @@
     "react-dom": "latest",
     "react-hook-form": "^7.85.0",
     "react-hot-toast": "^2.6.0",
+    "swiper": "^14.2.0",
     "tailwind-merge": "^3.6.0",
     "zod": "^4.4.3"
   },

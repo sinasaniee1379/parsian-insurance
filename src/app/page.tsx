@@ -4,11 +4,14 @@ import QuickServices from "./components/QuickServices";
 import Insurance from "./components/Insurance";
 import WhyParsian from "./components/WhyParsian";
 import ContactCTA from "./components/ContactCTA";
+import InsuranceNewsSlider from "@/components/InsuranceNewsSlider";
+import { insuranceNews } from "@/data/insurance-news";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
+      <InsuranceNewsSlider items={insuranceNews} />
       <section className="section-shell overflow-hidden mt-10">
         <div className="container-shell">
           <div className="mx-auto max-w-5xl">
