@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/parsian-logo-2k.png",
+        url: "/assets/parsian-logo-2k.png",
         width: 2048,
         height: 2048,
         alt: "لوگوی بیمه پارسیان",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ["/parsian-logo-2k.png"],
+    images: ["/assets/parsian-logo-2k.png"],
   },
   icons: {
     icon: "/favicon.ico",

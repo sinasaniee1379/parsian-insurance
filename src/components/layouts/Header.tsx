@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Icon } from "@/components/Icon";
+import Logo from "@/assets/parsian-logo-2k.png";
 
 const links = [
   { href: "/", label: "خانه" },
@@ -23,9 +24,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl">
       <div className="site-container flex h-20 items-center justify-between gap-6">
-        <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="صفحه اصلی بیمه پارسیان نمایندگی آفرین صناعی">
+        <Link
+          href="/"
+          className="flex min-w-0 items-center gap-3"
+          aria-label="صفحه اصلی بیمه پارسیان نمایندگی آفرین صناعی"
+        >
           <Image
-            src="/parsian-logo-2k.png"
+            src={Logo}
             width={2048}
             height={2048}
             sizes="56px"
@@ -34,14 +39,24 @@ export function Header() {
             className="h-14 w-14 object-contain"
           />
           <div className="hidden min-w-0 sm:block">
-            <p className="truncate text-sm font-extrabold text-slate-900">بیمه پارسیان</p>
-            <p className="truncate text-xs text-slate-500">نمایندگی آفرین صناعی</p>
+            <p className="truncate text-sm font-extrabold text-slate-900">
+              بیمه پارسیان
+            </p>
+            <p className="truncate text-xs text-slate-500">
+              نمایندگی آفرین صناعی
+            </p>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="ناوبری اصلی">
+        <nav
+          className="hidden items-center gap-1 lg:flex"
+          aria-label="ناوبری اصلی"
+        >
           {links.map((link) => {
-            const active = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+            const active =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href);
             return (
               <Link
                 key={link.href}
@@ -55,7 +70,10 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Link href="/contact" className="btn-primary gap-2"><Icon name="phone" className="h-4 w-4" />مشاوره بیمه</Link>
+          <Link href="/contact" className="btn-primary gap-2">
+            <Icon name="phone" className="h-4 w-4" />
+            مشاوره بیمه
+          </Link>
         </div>
 
         <motion.button
@@ -79,13 +97,26 @@ export function Header() {
             transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden border-t border-slate-200 bg-white lg:hidden"
           >
-            <nav className="site-container grid gap-2 py-4" aria-label="ناوبری موبایل">
+            <nav
+              className="site-container grid gap-2 py-4"
+              aria-label="ناوبری موبایل"
+            >
               {links.map((link) => (
-                <Link key={link.href} href={link.href} className="rounded-xl px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-xl px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50"
+                >
                   {link.label}
                 </Link>
               ))}
-              <Link href="/contact" className="btn-primary mt-2 gap-2 text-center"><Icon name="phone" className="h-4 w-4" />مشاوره بیمه</Link>
+              <Link
+                href="/contact"
+                className="btn-primary mt-2 gap-2 text-center"
+              >
+                <Icon name="phone" className="h-4 w-4" />
+                مشاوره بیمه
+              </Link>
             </nav>
           </motion.div>
         ) : null}

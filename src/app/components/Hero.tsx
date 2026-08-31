@@ -4,6 +4,7 @@ import { Typewriter } from "@/components/ui/Typewriter";
 import { quickServices } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "@/assets/parsian-logo-2k.png";
 
 const Hero = () => {
   return (
@@ -77,7 +78,7 @@ const Hero = () => {
                 </p>
               </div>
               <Image
-                src="/parsian-logo-2k.png"
+                src={Logo}
                 width={2048}
                 height={2048}
                 sizes="96px"
