@@ -6,11 +6,12 @@ import WhyParsian from "./components/WhyParsian";
 import ContactCTA from "./components/ContactCTA";
 import InsuranceNewsSlider from "@/components/InsuranceNewsSlider";
 import { insuranceNews } from "@/data/insurance-news";
-
+import RepresentativeProfile from "./components/RepresentativeProfile";
 export default function HomePage() {
   return (
     <>
       <Hero />
+      <RepresentativeProfile />
       <InsuranceNewsSlider items={insuranceNews} />
       <section className="section-shell overflow-hidden mt-10">
         <div className="container-shell">
