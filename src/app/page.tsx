@@ -11,8 +11,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <InsuranceNewsSlider items={insuranceNews} />
       <RepresentativeProfile />
-      {/* <InsuranceNewsSlider items={insuranceNews} /> */}
       <section className="section-shell overflow-hidden mt-10">
         <div className="container-shell">
           <div className="mx-auto max-w-5xl">

@@ -157,3 +157,33 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     display: none;
   }
 }
+
+.insurance-next,
+.insurance-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: white;
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.12);
+}
+
+.insurance-next {
+  right: 15px;
+}
+
+.insurance-prev {
+  left: 15px;
+}

@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import type { InsuranceNewsItem } from "@/data/insurance-news";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type InsuranceNewsSliderProps = {
   items: InsuranceNewsItem[];
@@ -23,7 +24,7 @@ function NewsCard({
   priority?: boolean;
 }) {
   const card = (
-    <article className="group h-full overflow-hidden rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_20px_60px_rgba(15,23,42,.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(15,23,42,.14)] sm:grid sm:grid-cols-[minmax(0,.9fr)_minmax(0,1.1fr)]">
+    <article className="group h-full overflow-hidden rounded-4xl border border-slate-200/80 bg-white transition duration-300 hover:-translate-y-1 sm:grid sm:grid-cols-[minmax(0,.9fr)_minmax(0,1.1fr)]">
       <div className="relative min-h-64 overflow-hidden bg-slate-100 sm:min-h-full">
         <Image
           src={item.image}
@@ -44,7 +45,7 @@ function NewsCard({
           ) : null}
         </div>
 
-        <h3 className="mt-5 text-2xl font-black leading-[1.55] tracking-[-.025em] text-slate-950 sm:text-3xl">
+        <h3 className="mt-5 text-2xl font-black leading-[1.55] tracking-tight text-slate-950 sm:text-3xl">
           {item.title}
         </h3>
 
@@ -115,23 +116,33 @@ export default function InsuranceNewsSlider({
           dir="rtl"
           className="insurance-news-swiper"
           modules={[Navigation, Pagination, Autoplay, A11y]}
-          navigation
           pagination={{ clickable: true }}
           autoplay={{
             delay: 5500,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
+          navigation={{
+            nextEl: ".insurance-next",
+            prevEl: ".insurance-prev",
+          }}
           loop={items.length > 1}
           spaceBetween={18}
           slidesPerView={1}
-          a11y={{ enabled: true }}
         >
           {items.map((item, index) => (
             <SwiperSlide key={item.id}>
               <NewsCard item={item} priority={index === 0} />
             </SwiperSlide>
           ))}
+
+          <button className="insurance-next">
+            <ChevronRight size={20} />
+          </button>
+
+          <button className="insurance-prev">
+            <ChevronLeft size={20} />
+          </button>
         </Swiper>
       ) : (
         <NewsCard item={items[0]} priority />

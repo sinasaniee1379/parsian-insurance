@@ -7,6 +7,7 @@ import { siteConfig } from "@/lib/site";
 import { inter, IranSans } from "@/constants/localFont";
 import QueryProvider from "@/components/provider/query-provider";
 import ToastContainer from "@/components/provider/ToastContainer";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -60,6 +61,20 @@ export default function RootLayout({
       className={`${IranSans.className} ${inter.className}`}
     >
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Q33XX8NHCQ"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-Q33XX8NHCQ');
+          `}
+        </Script>
         <Header />
         <main>
           <QueryProvider>
