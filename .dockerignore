@@ -1,0 +1,24 @@
+.git/
+.github/
+.vscode/
+.idea/
+
+node_modules/
+.next/
+out/
+npm-debug.log*
+
+# secrets / env (NEXT_PUBLIC_API_URL is passed as a build arg instead)
+.env
+.env.*
+**/.npmrc
+*.pem
+*.key
+
+Dockerfile*
+compose*.yaml
+.dockerignore
+
+coverage/
+*.md
+.DS_Store

@@ -1,0 +1,14 @@
+{
+  "id": "session-1793946869438",
+  "startedAt": "2026-11-06T06:34:29.438Z",
+  "cwd": "/home/sina/Computer/parsian-afarin-site-content-updated/parsian-afarin-site",
+  "context": {},
+  "metrics": {
+    "edits": 0,
+    "commands": 0,
+    "tasks": 0,
+    "errors": 0
+  },
+  "endedAt": "2026-11-06T06:37:19.692Z",
+  "duration": 170255
+}
